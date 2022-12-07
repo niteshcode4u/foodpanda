@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <table id = "recipe" style="width:100%" >
+            <tbody>
+                <tr>
+                    <td style="width:20%;"><h2>Title</h2></td>
+                    <td style="width:20%;"><h2>Tags</h2></td>
+                    <td style="width:20%;"><h2>Description</h2></td>
+                    <td style="width:20%;"><h2>Chef Name</h2></td>
+                    <td style="width:20%;"><h2>Image</h2></td>
+                </tr>
+                <tr>
+                    <td style="color: DarkKhaki;font-size:15px;"><b><%= @recipe.title %></b></td>
+                    <td style="color: SkyBlue;font-size:15px;"><b><%= @recipe.list_of_tags %></b></td>
+                    <td style="color: Green;font-size:15px;"><b><%= @recipe.description %></b></td>
+                    <td style="color: SkyBlue;font-size:15px;"><b><%= @recipe.chef_name %></b></td>
+                    <td><b><img src={@recipe.image}></b></td>
+                </tr>
+                <tr><td></td><td></td><td></td><td></td><td><div phx-click="back"><button>Back</button></div></td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>
